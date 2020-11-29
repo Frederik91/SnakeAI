@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "RunConsole/1.0.0": {
+        "dependencies": {
+          "GameLogic": "1.0.0"
+        },
+        "runtime": {
+          "RunConsole.dll": {}
+        }
+      },
+      "GameLogic/1.0.0": {
+        "runtime": {
+          "GameLogic.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RunConsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

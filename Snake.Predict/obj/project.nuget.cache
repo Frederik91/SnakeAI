@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Gxe1e+qEvFSGHvw+PGBGGStzOZia3Ffu0/t3GOt9DJWDf18O48GIeI0GXZZAf5lNf82qRWi0iybRXcQXDSVHIg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\snake-master\\Snake.Predict\\Snake.Predict.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Frederik Tegnander\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Frederik Tegnander\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

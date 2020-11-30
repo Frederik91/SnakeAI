@@ -4,14 +4,14 @@
     "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\snake-master\\RunConsole\\RunConsole.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\GameLogic\\GameLogic.csproj": {
+    "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\snake-master\\GameLogic\\GameLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\GameLogic\\GameLogic.csproj",
+        "projectUniqueName": "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\snake-master\\GameLogic\\GameLogic.csproj",
         "projectName": "GameLogic",
-        "projectPath": "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\GameLogic\\GameLogic.csproj",
+        "projectPath": "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\snake-master\\GameLogic\\GameLogic.csproj",
         "packagesPath": "C:\\Users\\Frederik Tegnander\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\GameLogic\\obj\\",
+        "outputPath": "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\snake-master\\GameLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -101,8 +101,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\GameLogic\\GameLogic.csproj": {
-                "projectPath": "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\GameLogic\\GameLogic.csproj"
+              "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\snake-master\\GameLogic\\GameLogic.csproj": {
+                "projectPath": "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\snake-master\\GameLogic\\GameLogic.csproj"
               }
             }
           }

@@ -1,0 +1,8 @@
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\Snake.Predict\bin\Debug\netstandard2.0\Snake.Predict.deps.json
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\Snake.Predict\bin\Debug\netstandard2.0\Snake.Predict.dll
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\Snake.Predict\bin\Debug\netstandard2.0\Snake.Predict.pdb
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\Snake.Predict\obj\Debug\netstandard2.0\Snake.Predict.AssemblyInfoInputs.cache
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\Snake.Predict\obj\Debug\netstandard2.0\Snake.Predict.AssemblyInfo.cs
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\Snake.Predict\obj\Debug\netstandard2.0\Snake.Predict.csproj.CoreCompileInputs.cache
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\Snake.Predict\obj\Debug\netstandard2.0\Snake.Predict.dll
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\Snake.Predict\obj\Debug\netstandard2.0\Snake.Predict.pdb

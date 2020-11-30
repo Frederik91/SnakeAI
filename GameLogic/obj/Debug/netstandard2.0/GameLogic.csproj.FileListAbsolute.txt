@@ -1,0 +1,17 @@
+C:\Users\Frederik Tegnander\Downloads\snake-master\GameLogic\bin\Debug\netstandard2.0\GameLogic.deps.json
+C:\Users\Frederik Tegnander\Downloads\snake-master\GameLogic\bin\Debug\netstandard2.0\GameLogic.dll
+C:\Users\Frederik Tegnander\Downloads\snake-master\GameLogic\bin\Debug\netstandard2.0\GameLogic.pdb
+C:\Users\Frederik Tegnander\Downloads\snake-master\GameLogic\obj\Debug\netstandard2.0\GameLogic.csprojAssemblyReference.cache
+C:\Users\Frederik Tegnander\Downloads\snake-master\GameLogic\obj\Debug\netstandard2.0\GameLogic.AssemblyInfoInputs.cache
+C:\Users\Frederik Tegnander\Downloads\snake-master\GameLogic\obj\Debug\netstandard2.0\GameLogic.AssemblyInfo.cs
+C:\Users\Frederik Tegnander\Downloads\snake-master\GameLogic\obj\Debug\netstandard2.0\GameLogic.csproj.CoreCompileInputs.cache
+C:\Users\Frederik Tegnander\Downloads\snake-master\GameLogic\obj\Debug\netstandard2.0\GameLogic.dll
+C:\Users\Frederik Tegnander\Downloads\snake-master\GameLogic\obj\Debug\netstandard2.0\GameLogic.pdb
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\GameLogic\bin\Debug\netstandard2.0\GameLogic.deps.json
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\GameLogic\bin\Debug\netstandard2.0\GameLogic.dll
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\GameLogic\bin\Debug\netstandard2.0\GameLogic.pdb
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\GameLogic\obj\Debug\netstandard2.0\GameLogic.AssemblyInfoInputs.cache
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\GameLogic\obj\Debug\netstandard2.0\GameLogic.AssemblyInfo.cs
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\GameLogic\obj\Debug\netstandard2.0\GameLogic.csproj.CoreCompileInputs.cache
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\GameLogic\obj\Debug\netstandard2.0\GameLogic.dll
+C:\Users\Frederik Tegnander\Downloads\snake-master\snake-master\GameLogic\obj\Debug\netstandard2.0\GameLogic.pdb

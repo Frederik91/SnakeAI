@@ -17,8 +17,8 @@
   "libraries": {
     "GameLogic/1.0.0": {
       "type": "project",
-      "path": "../../GameLogic/GameLogic.csproj",
-      "msbuildProject": "../../GameLogic/GameLogic.csproj"
+      "path": "../GameLogic/GameLogic.csproj",
+      "msbuildProject": "../GameLogic/GameLogic.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -63,8 +63,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\GameLogic\\GameLogic.csproj": {
-              "projectPath": "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\GameLogic\\GameLogic.csproj"
+            "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\snake-master\\GameLogic\\GameLogic.csproj": {
+              "projectPath": "C:\\Users\\Frederik Tegnander\\Downloads\\snake-master\\snake-master\\GameLogic\\GameLogic.csproj"
             }
           }
         }

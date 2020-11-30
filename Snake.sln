@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake", "Snake\Snake.csproj", "{111635DB-80D3-423F-888C-A1E4C0516F70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunConsole", "RunConsole\RunConsole.csproj", "{F63B298B-D459-4C42-AE60-5AD011588822}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunConsole", "RunConsole\RunConsole.csproj", "{F63B298B-D459-4C42-AE60-5AD011588822}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLogic", "..\GameLogic\GameLogic.csproj", "{16F1CEE7-41B1-4421-B05C-B8EFEE2AD22E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameLogic", "GameLogic\GameLogic.csproj", "{16F1CEE7-41B1-4421-B05C-B8EFEE2AD22E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake.Predict", "Snake.Predict\Snake.Predict.csproj", "{AF4420AC-11B7-4928-BB3A-87FFD2CE4DA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{16F1CEE7-41B1-4421-B05C-B8EFEE2AD22E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16F1CEE7-41B1-4421-B05C-B8EFEE2AD22E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16F1CEE7-41B1-4421-B05C-B8EFEE2AD22E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF4420AC-11B7-4928-BB3A-87FFD2CE4DA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF4420AC-11B7-4928-BB3A-87FFD2CE4DA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF4420AC-11B7-4928-BB3A-87FFD2CE4DA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF4420AC-11B7-4928-BB3A-87FFD2CE4DA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

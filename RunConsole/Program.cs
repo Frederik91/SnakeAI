@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using GameLogic;
@@ -13,13 +14,15 @@ namespace RunConsole
 
         static void Main(string[] args)
         {
-            var population = CreatePopulation(10000);
+            var population = CreatePopulation(5000);
 
             ScoreSetup bestEver = null;
             var bestEverScore = double.MinValue;
             for (var i = 1; i <= 20; i++)
             {
                 var result = RunPopulation(population);
+                var lines = result.Select(x => string.Join(";", x.Item1.AIDepthScaling, x.Item1.AIMaxDepth, x.Item1.AIMinDepth, x.Item1.DistanceToFoodReward, x.Item1.CrashCost, x.Item1.FoodReward, x.Item1.MoveCost, x.Item3));
+                File.AppendAllLines("data.txt", lines);
                 var bestScore = result.Max(x => x.Item2);
                 if (bestScore > bestEverScore)
                 {
@@ -43,31 +46,25 @@ namespace RunConsole
             Console.WriteLine($"AI min depth: {bestEver.AIMinDepth}");
         }
 
-        private static List<ScoreSetup> CreateNextGeneration(List<(ScoreSetup, double)> population)
+        private static List<ScoreSetup> CreateNextGeneration(List<(ScoreSetup, double, int)> population)
         {
             var newPopulation = new List<ScoreSetup>();
-            var min = (int)(population.Min(x => x.Item2) * 1000);
-            var max = (int)(population.Max(x => x.Item2) * 1000);
-
-            foreach (var chromosome in population)
+            var topChromosomes = new List<ScoreSetup>();
+            foreach (var chromosome in population.OrderByDescending(x => x.Item2))
             {
-                var rnd = _rnd.Next(min, max);
-
-                if (chromosome.Item2 * 1000 >= rnd)
+                if (newPopulation.Count > population.Count / 4)
                 {
-                    newPopulation.Add(chromosome.Item1);
-                    Mutate(chromosome.Item1);
+                    var newChromosome = CreateChromosome();
+                    var otherChromosome = topChromosomes[_rnd.Next(0, topChromosomes.Count - 1)];
+                    Crossover(otherChromosome, newChromosome);
+
+                    newPopulation.Add(newChromosome);
                 }
                 else
                 {
-                    var newChromosome = CreateChromosome();
-                    if (newPopulation.Any())
-                    {
-                        var otherChromosome = newPopulation[_rnd.Next(0, newPopulation.Count - 1)];
-                        Crossover(otherChromosome, newChromosome);
-                    }
-
-                    newPopulation.Add(newChromosome);
+                    newPopulation.Add(chromosome.Item1);
+                    topChromosomes.Add(chromosome.Item1);
+                    Mutate(chromosome.Item1);
                 }
             }
 
@@ -77,31 +74,36 @@ namespace RunConsole
 
         private static void Crossover(ScoreSetup chromosome, ScoreSetup newChromosome)
         {
-            var gene = _rnd.Next(0, 6);
-            switch (gene)
+            var crossoverStart = _rnd.Next(0, 6);
+            var crossoverEnd = _rnd.Next(crossoverStart, 6);
+            for (var i = crossoverStart; i <= crossoverEnd; i++)
             {
-                case 0:
-                    newChromosome.CrashCost = chromosome.CrashCost;
-                    break;
-                case 1:
-                    newChromosome.FoodReward = chromosome.FoodReward;
-                    break;
-                case 2:
-                    newChromosome.MoveCost = chromosome.MoveCost;
-                    break;
-                case 3:
-                    newChromosome.DistanceToFoodReward = chromosome.DistanceToFoodReward;
-                    break;
-                case 4:
-                    newChromosome.AIDepthScaling = chromosome.AIDepthScaling;
-                    break;
-                case 5:
-                    newChromosome.AIMaxDepth = chromosome.AIMaxDepth;
-                    break;
-                case 6:
-                    newChromosome.AIMinDepth = chromosome.AIMinDepth;
-                    break;
+                switch (i)
+                {
+                    case 0:
+                        newChromosome.CrashCost = chromosome.CrashCost;
+                        break;
+                    case 1:
+                        newChromosome.FoodReward = chromosome.FoodReward;
+                        break;
+                    case 2:
+                        newChromosome.MoveCost = chromosome.MoveCost;
+                        break;
+                    case 3:
+                        newChromosome.DistanceToFoodReward = chromosome.DistanceToFoodReward;
+                        break;
+                    case 4:
+                        newChromosome.AIDepthScaling = chromosome.AIDepthScaling;
+                        break;
+                    case 5:
+                        newChromosome.AIMaxDepth = chromosome.AIMaxDepth;
+                        break;
+                    case 6:
+                        newChromosome.AIMinDepth = chromosome.AIMinDepth;
+                        break;
+                }
             }
+
         }
 
 
@@ -137,7 +139,7 @@ namespace RunConsole
             }
         }
 
-        private static List<(ScoreSetup, double)> RunPopulation(IReadOnlyList<ScoreSetup> population)
+        private static List<(ScoreSetup, double, int)> RunPopulation(IReadOnlyList<ScoreSetup> population)
         {
             var games = new List<Game>();
             foreach (var chromosome in population)
@@ -152,13 +154,13 @@ namespace RunConsole
             {
                 var index = games.IndexOf(x);
                 var chromosome = population[index];
-                return (chromosome, CalculateFitness(x));
+                return (chromosome, CalculateFitness(x), x.Settings.Score);
             }).ToList();
         }
 
         private static double CalculateFitness(Game game)
         {
-            return game.Settings.Score - game.Settings.Duration;
+            return game.Settings.Score;
         }
 
         private static List<ScoreSetup> CreatePopulation(int size)
@@ -188,22 +190,22 @@ namespace RunConsole
 
         private static int GetRandomMoveCost()
         {
-            return _rnd.Next(-100, 100);
+            return _rnd.Next(-1000, 1000);
         }
 
         private static int GetRandomFoodReward()
         {
-            return _rnd.Next(-100, 100);
+            return _rnd.Next(-1000, 1000);
         }
 
         private static int GetRandomCrashCost()
         {
-            return _rnd.Next(-100, 1000);
+            return _rnd.Next(-10000, 10000);
         }
 
         private static int GetRandomDistanceToFoodReward()
         {
-            return _rnd.Next(-100, 100);
+            return _rnd.Next(-1000, 1000);
         }
 
         private static double GetRandomAIDepthScaling()
@@ -218,7 +220,7 @@ namespace RunConsole
 
         private static int GetRandomAIMinDepth()
         {
-            return _rnd.Next(0, 10);
+            return _rnd.Next(0, 5);
         }
     }
 }
